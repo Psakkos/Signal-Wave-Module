@@ -7,7 +7,11 @@ var SignalWave=function(array){
   function getRange(){}
   function getPeriod(){}
   function getPointArray(){}
-  function shiftX(value){}
+  function shiftX(value){
+    for(a=0; a<numberofPoints; a++){
+      
+    }
+  }
   function stretchX(value){}
   function stretchY(value){}
   function transformation(){}
