@@ -42,12 +42,13 @@ let Signal = function(){
   }
 }
   function transformation(value){
-
+      return transformedPoints;
   }
-  function outputOf(){
-
+  function outputOf(xvalue){
+      let answer= xvalue%numberOfPoints
+      return points[answer].gety();
   }
-  function calculateSpan(){
+  function calculateSpan(array){
 
   }
   return{shiftX,shiftY,stretchY,stretchX,transformation,outputOf}
