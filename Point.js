@@ -1,20 +1,30 @@
-var Point =function (xcor,ycor){
-  let x = xcor;
-  let y = y cor;
-  function get x() {returnx;}
-  function get y() {returny;}
-  function magnitude (); {
-      let dist= Math.sqrt(x*x+y*y)
-      return dist;
-  }
-  function distanceTo(p2){
-    let xsquared=(x-P2.getx()) *(x-P2.getx());
-    let ysquared=(y-P2.gety()) *(y-P2.gety());
-      return Math.sqrt(xsquared+ysquared);
-  }
-  function direction (){
-    return Math.atan (y/x)*180/Math.PI;
-  }
-  return{getx,getymagnitude,distanceTo,direction};
+const Point = function(xcor,ycor){
+    let x = xcor;
+    let y = ycor;
+    function getx(){return x;}
+    function gety(){return y;}
+    function magnitude(){
+        return Math.sqrt(x*x+y*y);
+    }
+    function distanceTo(p2){
+        let xsqared = (p2.getx()-x)*(px.getx()-x);
+        let ysquared = (p2.gety()-y)*(p2.gety()-y);
+    }
+    function direction(){
+        let angle = Math.atan2(y,x)*180 / Math.PI
+        if(x>=0 && y>0){
+            return angle;
+        }
+        else if(x<0){
+            return 180 + angle;
+        }
+        else{
+            return 360+angle
+        }
+    }
+    function print(){
+        console.log("("+x+", "+y+")");
+    }
+    return{getx,gety,magnitude,distanceTo,direction,print};
 }
-Module.exports=Point;
+module.exports = Point;
