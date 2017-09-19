@@ -14,15 +14,19 @@ function main(){
     let array = [p1,p2,p3,p4,p5,p6];
 
     let testWave = new Wave(array);
-
     testWave.transform().forEach(function(point){
-        point.print();
+      point.print();
     });
     console.log("--------");
-    testWave.shiftX(7);
-    testWave.stretchY(4);
+    testWave.stretchY(5)
 
+    console.log("--------");
+    console.log(testWave.getPeriod());
 
+    console.log("--------");
+    console.log(testWave.outputOf(33));
+
+    console.log("--------");
     let secondWave = new Wave(testWave.transform());
 
     secondWave.transform().forEach(function(point){

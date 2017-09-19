@@ -46,7 +46,7 @@ let Signal = function(array){
       return transformedPoints;
   }
   function outputOf(xvalue){
-      let answer= xvalue%period
+      let answer= xvalue%period;
       return points[answer].gety();
   }
   function calculateSpan(array,coordinate){
@@ -68,6 +68,6 @@ let Signal = function(array){
         let ySpan=ymax- ymin;
       }
   }
-  return{shiftX,shiftY,stretchY,stretchX,transform,outputOf}
+  return{getPeriod,getRange,shiftX,shiftY,stretchY,stretchX,transform,outputOf}
 }
 module.exports=Signal;
